@@ -17,8 +17,10 @@ Implements the **Authorization Code flow**, JWT-based access tokens (RS256), JWK
 * ⚙️ OpenID Discovery (`.well-known`)
 * 🧪 Postman collection included for testing
 
+
 ---
----
+<img src="OAuth-flow.png" alt="flow image">
+
 
 ## 🧠 How It Works
 
