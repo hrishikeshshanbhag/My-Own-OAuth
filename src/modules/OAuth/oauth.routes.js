@@ -6,5 +6,6 @@ oauthRouter.get(
   controller.handleOpenIdCongiguration,
 );
 oauthRouter.post("/token", controller.handleTokenGeneration);
-
+oauthRouter.get("/jwks", controller.generateJwksUri);
+oauthRouter.get("/userinfo", controller.handleUserInfo);
 export default oauthRouter;
