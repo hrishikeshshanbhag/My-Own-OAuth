@@ -1,0 +1,158 @@
+{
+  "info": {
+    "_postman_id": "228da8a2-5f0a-46ad-a75c-8ec467b6e811",
+    "name": "OAuth",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "46705619",
+    "_collection_link": "https://go.postman.co/collection/46705619-228da8a2-5f0a-46ad-a75c-8ec467b6e811?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "http://localhost:4000/api/oauth/authenticate/.well-known/openid-configuration",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:4000/api/oauth/authenticate/.well-known/openid-configuration",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4000",
+          "path": [
+            "api",
+            "oauth",
+            "authenticate",
+            ".well-known",
+            "openid-configuration"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:4000/api/auth/logincode",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"hrishikesh@gmail.com\",\r\n    \"password\": \"Hrishikesh@123\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:4000/api/auth/logincode",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4000",
+          "path": [
+            "api",
+            "auth",
+            "logincode"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:4000/api/oauth/token",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"code\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZTNjYjA0YzA4ZWMwZTNmNDU2MWEwZiIsInJvbGUiOiJjdXN0b21lciIsImlhdCI6MTc3NjU4NDI2NSwiZXhwIjoxNzc2NTg0NTY1fQ.Qu04-DHnfcZIlAln8kfc9nwBEDuqaybpRVdx7r7IhJM\",\r\n    \"clientId\": \"1234\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:4000/api/oauth/token",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4000",
+          "path": [
+            "api",
+            "oauth",
+            "token"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:4000/api/oauth/jwks",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:4000/api/oauth/jwks",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4000",
+          "path": [
+            "api",
+            "oauth",
+            "jwks"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:4000/api/oauth/userinfo",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjEifQ.eyJzdWIiOiI2OWUzY2IwNGMwOGVjMGUzZjQ1NjFhMGYiLCJyb2xlIjoiY3VzdG9tZXIiLCJpYXQiOjE3NzY1ODQyOTcsImV4cCI6MTc3NjU4Nzg5NywiYXVkIjoiMTIzNCIsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDAwMCJ9.DzlNntLnLPaSdHARAJTbdL7npFX2fydpwfdzNyBs8ouXg4_GwVUWc-lZgOXhZm_51YEUuEsGmKfVnZip_195pEUn7HfCzzARsAfHWutIbjWJ9qXUQLWJsKULjnTMDfrX6AtjkM0kcN70XPUDaP9M0MZ2-IvraaIW8BmPJMCrp0dsI2IrAgdZFmNU7cDo6mF1zxw5PJyHW4gBjQqgf0gvKsl1rdeY8LjsuKrrnFN1NZLKYQwk05hEW2Mf0qxM3hz_0xK_i2BEatcdymxtywbr4dEw05mX1wJQpqka93JMO43jXhSge_RugL06nEtgL9c51xYQjeavoX0CeuWnGpIK9w",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:4000/api/oauth/userinfo",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4000",
+          "path": [
+            "api",
+            "oauth",
+            "userinfo"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
